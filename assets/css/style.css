@@ -12,7 +12,7 @@
 }
 
 .bg-color-personal-info {
-    background-color: #f4f4f4;
+    background-color: #e67e22;
 }
 
 .bg-color-work-history {
@@ -253,21 +253,28 @@ footer {
 
 /*--------------------------------------------------- Personal Info */
 
+.personal-info-heading {
+    color: #fafafa;
+}
+
 .personal-info-item {
     margin-bottom: 40px;
     display: block;
     clear: both;
+    color: #fafafa;
 }
 
 .personal-info-item .key, 
 .personal-info-item .value {
     padding-right: 8px;
     display: inline-block;
+    
 }
 
 .personal-info-item .key p, 
 .personal-info-item .value p {
     margin: 0;
+    
 }
 
 .personal-info-item .key {
@@ -284,6 +291,13 @@ footer {
 .personal-info-item .value {
     position: relative;
     width: 60%;
+    
+}
+
+.personal-info-item .value a {
+    text-decoration: none;
+    color: #fafafa
+    
 }
 
 /*--------------------------------------------------- Skills */
