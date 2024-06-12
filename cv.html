@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/e5ad082b58.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-vuFJf4JpOHKwG6TaJ7g1FuK3qBdU5qLbTDAo2zKrG1Ozom8t6+9mPJV/VKiKxA8DB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/images/dhfavicon.png">
     <title>David Hutton | Full Stack Developer</title>
@@ -42,10 +44,269 @@
             </div>
        </div>
     </header>  
-    <section> 
-        <!-- Content goes here -->
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 bg-color-work-history section-column">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="history-heading uppercase">Work History</h3>
+                        <p id="more-info-click"><i class="fa-solid fa-hand-pointer"></i> for more info.</p>
+                    </div>
+                </div>
+                <div class="history-items">
+                    <div class="timeline-item" data-dates="03/2023 - Present">
+                        <button type="button" class="btn btn-outline-light btn-sm btn-bg-color" data-bs-toggle="modal" data-bs-target="#edynmodal">
+                            <i class="fa-solid fa-hand-pointer"></i>
+                        </button>
+                        <h4>Edyn Group</h4>
+                        <p>Accounts Assistant</p>
+                    </div>
+                    <div class="timeline-item" data-dates="04/2022 - 03/2023">
+                        <button type="button" class="btn btn-outline-light btn-sm btn-bg-color" data-bs-toggle="modal" data-bs-target="#podpakmodal"><i class="fa-solid fa-hand-pointer"></i></button>
+                        <h4>Podpak</h4>
+                        <p>Senior Accounts Assistant</p>
+                    </div>
+                    <div class="timeline-item" data-dates="06/2021 - 04/2022">
+                        <button type="button" class="btn btn-outline-light btn-sm btn-bg-color" data-bs-toggle="modal" data-bs-target="#ivcmodal"><i class="fa-solid fa-hand-pointer"></i></button>
+                        <h4>IVC Evidensia</h4>
+                        <p>Senior Purchase Ledger Reconciliations Clerk</p>
+                    </div>
+                    <div class="timeline-item" data-dates="10/2018 - 06/2021">
+                        <button type="button" class="btn btn-outline-light btn-sm btn-bg-color" data-bs-toggle="modal" data-bs-target="#mcmodal"><i class="fa-solid fa-hand-pointer"></i></button>
+                        <h4>Matthew Clark Bibendum</h4>
+                        <p>Purchase to Pay Assistant</p>
+                    </div>
+                    <div class="timeline-item" data-dates="05/2018 - 09/2018">
+                        <button type="button" class="btn btn-outline-light btn-sm btn-bg-color" data-bs-toggle="modal" data-bs-target="#travelmodal"><i class="fa-solid fa-hand-pointer"></i></button>
+                        <h4>Travelling Europe and Southeast Asia</h4>
+                        <p>Click to see my favorite memories!</p>
+                    </div>
+                    
+                    <div class="timeline-item" data-dates="07/2017 - 04/2018">
+                        <button type="button" class="btn btn-outline-light btn-sm btn-bg-color" data-bs-toggle="modal" data-bs-target="#spacemodal"><i class="fa-solid fa-hand-pointer"></i></button>
+                        <h4>Space Engineering</h4>
+                        <p>Finance Administrator</p>
+                    </div>
+                    <div class="timeline-item" data-dates="12/2016 - 07/2017">
+                        <button type="button" class="btn btn-outline-light btn-sm btn-bg-color" data-bs-toggle="modal" data-bs-target="#townhousemodal"><i class="fa-solid fa-hand-pointer"></i></button>
+                        <h4>The Townhouse</h4>
+                        <p>Barman / Waiting Staff</p>
+                    </div>
+                    <div class="timeline-item" data-dates="04/2014 - 10/2016">
+                        <button type="button" class="btn btn-outline-light btn-sm btn-bg-color" data-bs-toggle="modal" data-bs-target="#ipecomodal"><i class="fa-solid fa-hand-pointer"></i></button>
+                        <h4>Ipeco Composites Ltd</h4>
+                        <p>Composite Technician</p>
+                    </div>
+                    <div class="timeline-item" data-dates="04/2012 - 03/2014">
+                        <button type="button" class="btn btn-outline-light btn-sm btn-bg-color" data-bs-toggle="modal" data-bs-target="#ohhmodal"><i class="fa-solid fa-hand-pointer"></i></button>
+                        <h4>OHH Company</h4>
+                        <p>Restaurant Manager</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 bg-color-three-reasons section-column">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="section-heading uppercase">My Skills</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="skills-icon fa-solid fa-gears" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <h4 class="three-reasons-heading uppercase">Technical Proficiency</h4>
+                                        <div class="progress">
+                                        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%;">
+                                            <span class="sr-only">70% complete</span>
+                                        </div>
+                                        <span class="progress-type">Technical Proficiency</span>
+                                    </div>
+                                    Extensive experience with various industries and accounting/IT systems, including Sage200, NetSuite, Xero, and JDE.
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="skills-icon fa-solid fa-cloud-arrow-up" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <h4 class="three-reasons-heading uppercase">Systems Improvement</h4>
+                                
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;">
+                                            <span class="sr-only">80% complete</span>
+                                        </div>
+                                        <span class="progress-type">Systems Improvement</span>
+                                    </div>
+                                    Proven track record in enhancing productivity and quality control, with significant contributions to IT infrastructure and process optimization.
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="skills-icon fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <h4 class="three-reasons-heading uppercase">Analytical Expertise</h4>
+                                
+                                    <div class="progress">
+                                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%;">
+                                            <span class="sr-only">90% complete</span>
+                                        </div>
+                                        <span class="progress-type">Analytical Expertise</span>
+                                    </div>
+                                    Strong analytical skills, ensuring regulatory compliance, efficient vendor management, and detailed financial reporting.
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="skills-icon fa-solid fa-bolt" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <h4 class="three-reasons-heading uppercase">Versatile Professional</h4>
+                                
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%;">
+                                            <span class="sr-only">75% complete</span>
+                                        </div>
+                                        <span class="progress-type">Versatile Professional</span>
+                                    </div>
+                                    From front-of-house management to IT enhancements, I bring a blend of experience to drive operational excellence and innovate in software development.
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="skills-icon fa-solid fa-person-running" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <h4 class="three-reasons-heading uppercase">Adaptability</h4>
+                                
+                                    <div class="progress">
+                                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%;">
+                                            <span class="sr-only">85% complete</span>
+                                        </div>
+                                        <span class="progress-type">Adaptability</span>
+                                    </div>
+                                    Quickly adapts to new environments and technologies, thriving in fast-paced and dynamic settings while maintaining a high level of performance.
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="skills-icon fa-solid fa-diagram-project" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <h4 class="three-reasons-heading uppercase">Project Management</h4>
+                                
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;">
+                                            <span class="sr-only">60% complete</span>
+                                        </div>
+                                        <span class="progress-type">Project Management</span>
+                                    </div>
+                                    Proficient in coordinating and leading projects, ensuring timely delivery and adherence to budget constraints while maintaining high standards of quality and stakeholder satisfaction.
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="skills-icon fa-solid fa-comment" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <h4 class="three-reasons-heading uppercase">Communication</h4>
+                                
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%;">
+                                            <span class="sr-only">90% complete</span>
+                                        </div>
+                                        <span class="progress-type">Communication </span>
+                                    </div>
+                                    Effective communicator across various levels of an organization, adept at conveying complex information clearly and persuasively.
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="skills-icon fa-solid fa-lightbulb" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <h4 class="three-reasons-heading uppercase">Problem Solving</h4>
+                                
+                                    <div class="progress">
+                                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%;">
+                                            <span class="sr-only">85% complete</span>
+                                        </div>
+                                        <span class="progress-type">Problem Solving</span>
+                                    </div>
+                                    Skilled in identifying issues, analyzing root causes, and developing innovative solutions to streamline processes and improve efficiency.
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="skills-icon fa-solid fa-people-group" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <h4 class="three-reasons-heading uppercase">Team Leadership</h4>
+                                
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;">
+                                            <span class="sr-only">80% complete</span>
+                                        </div>
+                                        <span class="progress-type">Team Leadership</span>
+                                    </div>
+                                    Experience in leading teams to achieve common goals, fostering collaboration, and motivating team members towards success.
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="skills-icon fa-solid fa-heart" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <h4 class="three-reasons-heading uppercase">Customer Relationship Management</h4>
+                                
+                                    <div class="progress">
+                                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%;">
+                                            <span class="sr-only">90% complete</span>
+                                        </div>
+                                        <span class="progress-type">Customer Relationship Management</span>
+                                    </div>
+                                    Proven ability to build strong relationships with customers and stakeholders, ensuring their needs are met and issues are resolved promptly.
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
     </section>
-    <footer clas="container-fluid">
+    <footer class="container-fluid">
         <div class="row" id="footer-details">
             <div class="col-sm-4">
                 <h5 class="uppercase general-sub">About</h5>
@@ -77,5 +338,133 @@
         </div>
         
     </footer>
+
+    <div class="modal fade" id="edynmodal" tabindex="-1" aria-labelledby="edynmodal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="edynmodallabel">Accounts Assistant - Edyn Group</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>At Edyn, I manage vendor enquiries across multiple jurisdictions and oversee all vendor accounts, contributing to process improvements across the organization. I ensure compliance with high-value payment runs across five countries, navigating specific tax and regulatory requirements. I meticulously review expenses for adherence to company policy, working efficiently to complete month-end tasks to audit standards. Proficient in Sage200, I also assisted in migrating to NetSuite accounting software.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="spacemodal" tabindex="-1" aria-labelledby="spacemodal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="spacemodallabel">Finance Administrator - Space Engineering</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>In this temporary role, I managed and reconciled database systems, ensuring efficient accounting processes. I designed templates to streamline data entry, contributing to enhanced operational efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="podpakmodal" tabindex="-1" aria-labelledby="podpakmodal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="podpakmodallabel">Senior Accounts Assistant - Podpak</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>As a Senior Accounts Assistant at Podpak, I managed customer and supplier ledgers, swiftly resolving queries and producing weekly reports for business forecasting. Utilizing Xero accounting software, I created and maintained procurement reports to monitor price fluctuations. I also managed the monthly payroll, addressing any queries, and leveraged my software development knowledge to assist in IT infrastructure improvements and server migrations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ivcmodal" tabindex="-1" aria-labelledby="ivcmodal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ivcmodallabel">Senior Purchase Ledger Reconciliations Clerk - IVC Evidensia</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>In this role, I took ownership of the NON IVC ledger during a business integration phase, ensuring seamless processing of weekly payment runs in compliance with company and regulatory standards. I achieved zero outstanding credit balances over 60 days, building strong supplier relationships to resolve discrepancies. Proficient in Open Accounts and DBCapture software, I liaised with suppliers to complete month-end statement reconciliations and consistently met stringent SLAs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="mcmodal" tabindex="-1" aria-labelledby="mcmodal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="mcmodallabel">Purchase to Pay Assistant - Matthew Clark Bibendum</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>At Matthew Clark Bibendum, I managed end-to-end supplier account reconciliations for over 200 accounts, significantly reducing aged creditors from 3500 to less than 400. I swiftly resolved queries, developed and enhanced reports for detailed ledger statistics, and proficiently used JDE and Documation accounting software. With expertise in Excel, including lookups, pivots, indexing, and macros, I ensured weekly payment runs were within budget and effectively recovered £300k in previously written-off debt.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="travelmodal" tabindex="-1" aria-labelledby="travelmodal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="travelmodallabel">Travelling Europe & Southeast Asia</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Text here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="townhousemodal" tabindex="-1" aria-labelledby="townhousemodal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="townhousemodallabel">Barman / Waiting Staff - Townhouse</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>At Townhouse, I provided exceptional customer service, ensuring a friendly and professional experience for guests. I handled customer enquiries and issues promptly, maintaining high standards throughout their visit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ipecomodal" tabindex="-1" aria-labelledby="ipecomodal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ipecomodallabel">Composite Technician - Ipeco Composites Ltd</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>At Ipeco Composites Ltd, I specialized in laying up a variety of fiber components for the aerospace industry. Working under tight deadlines for Boeing, Rolls Royce, and Airbus projects, I achieved premium standards and improved productivity by 150% through enhanced quality control processes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ohhmodal" tabindex="-1" aria-labelledby="ohhmodal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ohhmodallabel">Restaurant Manager - OHH Company</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>As Restaurant Manager at OHH Company, I led a team in a bustling Bristol restaurant. Responsibilities included staff management, payroll, stock control, training, promotions, and ensuring exceptional customer experiences.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      
+      
 </body>
 </html>
