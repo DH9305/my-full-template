@@ -410,7 +410,7 @@
     </div>
 
     <div class="modal fade" id="travelmodal" tabindex="-1" aria-labelledby="travelmodal" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="travelmodallabel">Travelling Europe & Southeast Asia</h1>
@@ -418,10 +418,59 @@
                 </div>
                 <div class="modal-body">
                     <p>Text here</p>
+                    <div class="image-grid">
+                        <div class="grid-image-container">
+                            <img src="assets/images/image1.jpg" alt="Image 1" class="grid-image">
+                        </div>
+                        <div class="grid-image-container">
+                            <img src="assets/images/image2.jpg" alt="Image 2" class="grid-image">
+                        </div>
+                        <div class="grid-image-container">
+                            <img src="assets/images/image3.jpg" alt="Image 3" class="grid-image">
+                        </div>
+                        <div class="grid-image-container">
+                            <img src="assets/images/image4.jpg" alt="Image 4" class="grid-image">
+                        </div>
+                        <div class="grid-image-container">
+                            <img src="assets/images/image5.jpg" alt="Image 5" class="grid-image">
+                        </div>
+                        <div class="grid-image-container">
+                            <img src="assets/images/image6.jpg" alt="Image 6" class="grid-image">
+                        </div>
+                        <div class="grid-image-container">
+                            <img src="assets/images/image7.jpg" alt="Image 7" class="grid-image">
+                        </div>
+                        <div class="grid-image-container">
+                            <img src="assets/images/image8.jpg" alt="Image 8" class="grid-image">
+                        </div>
+                        <div class="grid-image-container">
+                            <img src="assets/images/image9.jpg" alt="Image 9" class="grid-image">
+                        </div>
+                        <div class="grid-image-container">
+                            <img src="assets/images/image10.jpg" alt="Image 10" class="grid-image">
+                        </div>
+                        <div class="grid-image-container">
+                            <img src="assets/images/image11.jpg" alt="Image 11" class="grid-image">
+                        </div>
+                        <div class="grid-image-container">
+                            <img src="assets/images/image12.jpg" alt="Image 12" class="grid-image">
+                        </div>
+                        <div class="grid-image-container">
+                            <img src="assets/images/image13.jpg" alt="Image 13" class="grid-image">
+                        </div>
+                        <div class="grid-image-container">
+                            <img src="assets/images/image14.jpg" alt="Image 14" class="grid-image">
+                        </div>
+                        
+                    </div>
+                    <div class="image-overlay" id="imageOverlay">
+                        <img id="overlayImage" src="" alt="Overlay Image">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <div class="modal fade" id="townhousemodal" tabindex="-1" aria-labelledby="townhousemodal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -464,6 +513,25 @@
         </div>
     </div>
     
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const gridImages = document.querySelectorAll('.grid-image');
+            const imageOverlay = document.getElementById('imageOverlay');
+            const overlayImage = document.getElementById('overlayImage');
+
+            gridImages.forEach(image => {
+                image.addEventListener('click', () => {
+                    overlayImage.src = image.src;
+                    imageOverlay.style.display = 'flex';
+                });
+            });
+
+            imageOverlay.addEventListener('click', () => {
+                imageOverlay.style.display = 'none';
+            });
+        });
+    </script>
       
       
 </body>
